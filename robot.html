@@ -3,11 +3,11 @@
 <style>
   #robot {
     position:absolute;
-    top:25vh;
+    top:25vmin;
     left:25vmin;
     width:50vmin;
-    height:50vh;
-    border:1px solid coral;
+    height:50vmin;
+    border:1px solid gray;
   }
   
   #rect {
@@ -47,7 +47,18 @@
     width:10%;
     height:10%;
     background-color:gold;
-    transform:rotateZ(45deg);
+    transform: rotateZ(45deg);
+  }
+  
+    #trap {
+    position:absolute;
+    top:80%;
+    left:25%;
+    width:50%;
+    height:30%;
+    background-color:cyan;
+    transform: rotateX(10deg);
+  }
       
 </style>
 <body>
@@ -56,6 +67,7 @@
   <div id="oval"></div>
   <div id="circle"></div>
   <div id="diamond"></div>
+  <div id="trap"></div>
   
   
   </div>
