@@ -10,11 +10,7 @@
     border:1px solid gray;
     animation: fadeIN 0.5s;
   }
-  
-  @keyframes fadeIN {
-    from{opacity: 0;}
-    to{opacity: 1;}
-  }
+
   #rect {
     position:absolute;
     top:50%;
@@ -47,8 +43,8 @@
   
   #diamond {
     position:absolute;
-    top:30%;
-    left:40%;
+    top:40%;
+    left:50%;
     width:10%;
     height:10%;
     background-color:red;
@@ -101,6 +97,15 @@
     background-image:linear-gradient(orange,purple);
   }
  
+   @keyframes fadeIN {
+    from{opacity: 0;}
+    to{opacity: 1;}
+  }
+  
+    @keyframes blink {
+      from{}
+      to{}
+      
 </style>
 <body>
 <div id = "robot">
