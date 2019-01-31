@@ -103,8 +103,8 @@
   }
   
    @keyframes blink {
-      from{}
-      to{}
+      from{opacity: 0;}
+      to{opacity: 10;}
   }
   
    @keyframes upanddown {
@@ -116,7 +116,7 @@
 <body>
 <div id = "robot">
   <div id="rect"></div>
-  <div id="oval"></div>
+  <div id="oval" class = "blink"></div>
   <div id="circle" class = "accentColor"></div>
   <div id="diamond"></div>
   <div id="trap"></div>
