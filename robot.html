@@ -8,8 +8,12 @@
     width:50vmin;
     height:50vh;
     border:1px solid gray;
-    animation: fadeIN 1s;
+    animation: fadeIN 0.5s;
   }
+  
+  @keyframes fadeIN {
+    from{opacity: 0;}
+    to{opacity: 1;}
   
   #rect {
     position:absolute;
