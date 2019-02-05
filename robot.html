@@ -8,7 +8,8 @@
     width:50vmin;
     height:50vh;
     border:1px solid gray;
-    animation: fadeIN 0.5s;
+    animation: fadeIN 0.5s, jumping 2s;
+    
   }
 
   #rect {
@@ -117,7 +118,13 @@
   @keyframes rotate2 {
     from{rotate: 45deg;}
   }
-
+  
+  @kayframes jumping {
+    from{translateY: 0vmin;}
+    50%{translateY: -20vmin;}
+    to{translateY: 0vmin;}
+  }
+  
 </style>
 <body>
 <div id = "robot">
