@@ -8,7 +8,10 @@
     width:50vmin;
     height:50vh;
     border:1px solid gray;
-    animation: jumping 2s;
+    transform-origin: bottom;
+    animation: squeezedown 0.5s 2s,
+               jumping 2s ease-out 2.5s,
+               jumping 2s ease-in 4.5s;
     
   }
 
@@ -72,7 +75,6 @@
     height:10%;
     background-color:green;
     transform: skewX(-35deg);
-    animation: upanddown 3s linear infinite;
   }
   
   #para2 {
@@ -115,10 +117,6 @@
       position:0px 100px;
   }
   
-  @keyframes rotate2 {
-    from{rotate: 45deg;}
-  }
-  
   @keyframes jumping {
     from{transform: translateY(0);}
     50%{transform: translateY:(-20vmin);}
@@ -126,17 +124,22 @@
   }
   
   
-  @keyframes jumping2 {
+  @keyframes jumpingup {
     from{transform: translateY(0);}
     to{transform: translateY:(-20vmin);}
 
   }
   
-  @keyframes jumping2 {
+  @keyframes jumpingdown {
     from{transform: translateY(-20min);}
     to{transform: translateY:(0);}
 
   }
+  
+  @keyframes squeezedown {
+    from {transform: scaleY(1);
+    to{transform: scaleY(0.8);
+      }
 </style>
 <body>
 <div id = "robot">
