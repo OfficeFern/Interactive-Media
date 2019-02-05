@@ -91,7 +91,7 @@
     height:10%;
     background-color:gold;
     clip-path:polygon(0 0, 80% 50%, 100% 100%, 20% 30%);
-    animation: upanddown 2s infinite;
+    animation: blink128 3s infinite;
   }
   
   .accentColor{
@@ -112,6 +112,11 @@
    @keyframes upanddown {
      from{top:40%}
      to{top:50%}
+  }
+  
+  @keyframes blink182 {
+    from{opacity: 2;}
+    to{opacity: 5;}
   }
 
 </style>
