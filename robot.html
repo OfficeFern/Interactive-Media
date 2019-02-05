@@ -71,7 +71,7 @@
     height:10%;
     background-color:green;
     transform: skewX(-35deg);
-    animation: upanddown 3s infinite;
+    animation: upanddown 3s linear infinite;
   }
   
   #para2 {
@@ -111,8 +111,12 @@
   }
   
    @keyframes upanddown {
-     from{top:40%}
-     to{top:50%}
+  0%, 100% {
+    bottom: 0;
+   }
+   50% {
+      bottom: 100px;
+    }
   }
   
   @keyframes blink182 {
