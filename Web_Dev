@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> ex1</title>
+<meta charset="utf-8">
+<style> p { color:#000000;}
+h1 { border: 3px inset #FF9900;
+padding: 5px;
+} 
+h2 { border: 5px double #0033FF;
+} 
+
+p  { color:black;
+}
+</style>
+</head>
+<body>  
+<h1>  Here is h1 heading</h1>
+<h2> Here is a h2 heading</h2>
+<p> Here is paragraph </p>
+</body>
+</html>
