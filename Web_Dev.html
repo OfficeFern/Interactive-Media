@@ -13,11 +13,26 @@ h2 { border: 5px double #0033FF;
 
 p  { color:black;
 }
+  
+#ball {
+  position:absolute;
+  top:70%;
+  left:60%;
+  border-radius:50%;
+  animation: upanddown 2s infinite;
+  }
+  
+@keyframes upanddown :{
+    from{transform: translateY(0);}
+    to{transform: translateY:(-20vmin);}
+  }
+
 </style>
 </head>
 <body>  
 <h1>  Here is h1 heading</h1>
 <h2> Here is a h2 heading</h2>
 <p> Here is paragraph </p>
+  <div id = "ball"></div>
 </body>
 </html>
