@@ -1,0 +1,19 @@
+default {
+background-color:white;
+color:#000099;
+font-family:Helvetica;
+}
+
+a {
+background-color:#CCCCCC;
+}
+
+h1 {
+font-family:Times New Roman
+color:black;
+}
+
+.news {
+font-style:italic;
+color:red;
+}
