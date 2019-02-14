@@ -14,17 +14,21 @@ background-size: contain;
 transform-origin: 60% 0%; 
 animation: 
         turn 2s ease,
-        turn .5s linear 2s 10, /* #5. After the first turn, let the ballerina turn 10 times duration 0.5 seconds without any acceleration */
+        turn .5s linear 2s 10,
         
-        turn 2s ease-out 22s 1, / #6. After then, let the ballerina turn once more slowly duration two seconds by getting slower
+        turn 2s ease-out 22s 1,
         
-        fade_out_in 2s 24s; / #7. after all the turn done, show the ballerina in fade out and fade in
+        fade_out_in 2s 24s;
 }
 
 @keyframes turn {
     from{transform: rotateY(0);}
     to{transform: rotateY(-1);}
 }
+        
 
 </style>
+<body>
+Hello there
+        </body>
 </html>
