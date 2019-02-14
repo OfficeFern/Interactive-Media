@@ -13,14 +13,15 @@ background-size: contain;
 
 transform-origin: 60% 0%; 
 animation:
-        turn 2s ease;
+        turn 2s ease,
         
-        turn .5s linear 2s 10;
+        turn .5s linear 2s 10,
         
-        turn 2s ease-out 22s 1;
+        turn 2s ease-out 22s 1,
         
         fade_out_in 2s 24s;
-
+        }
+        
 @keyframes turn {
     from{transform: rotateY(0);}
     to{transform: rotateY(-1);}
@@ -30,5 +31,5 @@ animation:
 </style>
 <body>
         <div id = "ballerina"></div>
-        </body>
+</body>
 </html>
