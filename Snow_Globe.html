@@ -28,7 +28,7 @@
     rotateX(10deg);
     }
   
-    #mountain {
+    .mountain {
     position:absolute;
     top:60%;
     left:30%;
@@ -39,27 +39,6 @@
     rotateX(30deg);
     }
     
-    #mountain2 {
-    position:absolute;
-    top:60%;
-    left:15%;
-    width:20%;
-    height:70%;
-    background-color:#000033;
-    transform:perspective(1em)
-    rotateX(30deg);
-    }
-    
-    #mountain3 {
-    position:absolute;
-    top:60%;
-    left:45%;
-    width:20%;
-    height:70%;
-    background-color:#808099;
-    transform:perspective(1em)
-    rotateX(30deg);
-    }
 
 </style>
 
@@ -68,11 +47,12 @@
     </div>
     
     <div id = "globe">
-        <div id = "mountain2">
+        <div class = "mountain" style = "background-color:#000033;left:15%;">
+            
         </div>
-        <div id = "mountain3">
+        <div class = "mountain" style = "background-color:#808099;left:45%;">
         </div>
-        <div id = "mountain">
+        <div class = "mountain">
         </div>
     </div>
 
