@@ -11,11 +11,6 @@
   background-color: red;
   }
   
-  @keyframes spin {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(360deg);}
-  }
-  
   </style>
 </head>
 
@@ -26,7 +21,18 @@
     //1. Variable
     var mybox;
     //2. Find the address of #box and remeber it
-    document.querySelector();
+    document.querySelector("#box");
+    //3. Write what you want to do
+    mybox.style.borderRadius = "50%";
+      
+    //4-1 put the headphone on
+    myBox.addEventListener("click", DoThis, false);
+      
+    function DoThis() {
+        //do something here
+        mybox.style.borderRadius = "50%";
+    }
+    
     
   </script>
   
