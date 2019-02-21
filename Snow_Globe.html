@@ -16,7 +16,7 @@
     overflow: hidden;
     }
     
-    #mountain {
+    #base {
     position:absolute;
     top:70%;
     left:30%;
@@ -28,15 +28,26 @@
     rotateX(10deg);
     }
   
+    #mountain {
+    position:absolute;
+    top:65%;
+    left:30%;
+    width:20%;
+    height:40%;
+    background-color:cyan;
+    transform:perspective(2em)
+    rotateX(10deg);
+    }
 
 </style>
 
 <body>
-    <div id = "mountain">
-    
+    <div id = "base">
     </div>
     
     <div id = "globe">
+        <div id = "mountain">
+        </div>
     </div>
 
 
