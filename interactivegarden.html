@@ -1,0 +1,436 @@
+<html>
+<style>
+    
+    #start {
+        position:absolute;
+        top: 30vh;
+        left: 10vw;
+        width:80vw;
+        height: 40vh;
+        background-color: gray;
+    }
+    
+    #game {
+        position:absolute;
+        top: 5vh;
+        left: 5vw;
+        width:90vw;
+        height: 90vh;
+        background-color: lightgray;
+        display: none;
+    }
+    
+    #end {
+        position:absolute;
+        top: 5vh;
+        left: 5vw;
+        width:90vw;
+        height: 90vh;
+        background-color: skyblue;
+        display: none;
+        overflow: hidden;
+    }
+    
+     #water {
+        position:absolute;
+        top: 35%;
+        left: 45%;
+        width: 10px;
+        height: 10px;
+        background-color: darkblue;
+        border-radius: 50%;
+        z-index: 3;
+        display: none;
+    }
+    
+    #water2 {
+        position:absolute;
+        top: 37%;
+        left: 42%;
+        width: 10px;
+        height: 10px;
+        background-color: darkblue;
+        border-radius: 50%;
+        z-index: 3;
+        display: none;
+    }
+    
+    #water3 {
+        position:absolute;
+        top: 40%;
+        left: 39%;
+        width: 10px;
+        height: 10px;
+        background-color: darkblue;
+        border-radius: 50%;
+        z-index: 3;
+        display: none;
+    }
+    
+    #water4 {
+        position:absolute;
+        top: 42%;
+        left: 37%;
+        width: 10px;
+        height: 10px;
+        background-color: darkblue;
+        border-radius: 50%;
+        z-index: 3;
+        display: none;
+    }
+    
+    #water5 {
+        position:absolute;
+        top: 45%;
+        left: 35%;
+        width: 10px;
+        height: 10px;
+        background-color: darkblue;
+        border-radius: 50%;
+        z-index: 3;
+        display: none;
+    }
+    
+    #startbutton {
+        position:absolute;
+        top: 30%;
+        left: 10%;
+        width:80%;
+        height: 40%;
+        background-color: cornflowerblue;
+        cursor: pointer;
+        user-select: none;
+    }
+    
+    #flower-top {
+        position:absolute;
+        top: 0%;
+        left: 0%;
+        width: 90%;
+        height: 30%;
+        background-color: darkgreen;
+        border-radius: 50%;
+        z-index: 3;
+    }
+    
+    #flower {
+        position:absolute;
+        top: 40%;
+        left: 10%;
+        width: 15%;
+        height: 60vh;
+
+    }
+    
+    #watering-can {
+        position:absolute;
+        top: 30%;
+        left: 50%;
+        width:15vw;
+        height: 15vh;
+        background-color: darkblue;
+    }
+    
+    #stem {
+        position:absolute;
+        top:10%;
+        left:20%;
+        width: 5vw;
+        height: 90vh;
+        background-color: darkgreen;
+    }
+    
+    #cover { 
+        position:absolute;
+        top:60%;
+        left:0%;
+        width:100%;
+        height:40%;
+        background-color: saddlebrown;
+    }
+    
+    #textbox { 
+        position:absolute;
+        top:30%;
+        left:15%;
+        width:70%;
+        height:100px;
+        background-color: lemonchiffon;
+        font-size: 24px;
+        color: darkgoldenrod;
+        text-align: center;
+        border-style: dashed;
+        border-color: saddlebrown;
+        vertical-align: middle;
+        line-height: 100px;
+    }
+    
+     #can-cover {
+        position:absolute;
+        top: 30%;
+        left: 50%;
+        width:15vw;
+        height: 15vh;
+        background-color: transparent;
+        transform:rotate(45deg);
+        z-index: 1;
+    }
+    
+     #sun {
+        position:absolute;
+        top: -10%;
+        left: 70%;
+        width: 300px;
+        height: 300px;
+        background-color: yellow;
+        border-radius: 50%;
+        z-index: 3;
+    }
+    
+    #retry {
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        width: 100px;
+        height: 50px;
+        background-color: gold;
+        border-style: solid;
+        border-color: black;
+        cursor: pointer;
+    }
+    
+    #win { 
+        position:absolute;
+        top:5%;
+        left:30%;
+        width:250px;
+        height:150px;
+        background-color: transparent;
+        font-size: 30px;
+        color: crimson;
+    }
+    
+    #leaf {
+        position:absolute;
+        top: 30%;
+        left: 7%;
+        width: 7%;
+        height: 10%;
+        background-color: darkgreen;
+        border-radius: 50%;
+        z-index: 3;
+        transform: skewX(35deg);
+        transform: rotate(45deg);
+    }
+    
+    #leaf2 {
+        position:absolute;
+        top: 40%;
+        left: 17%;
+        width: 7%;
+        height: 10%;
+        background-color: darkgreen;
+        border-radius: 50%;
+        z-index: 3;
+        transform: skewX(35deg);
+        transform: rotate(145deg);
+    }
+    
+    #flowermiddle {
+        position:absolute;
+        top: 11%;
+        left: 13%;
+        width: 7vw;
+        height: 10vh;
+        background-color: gold;
+        border-radius: 50%;
+        z-index: 3;
+    }
+
+</style>
+
+<body>
+    <div id = "start">
+        <div id = "startbutton">
+
+        </div>
+    </div>
+    
+    <div id = "game" style = "overflow: hidden;">
+        
+        <div id = "flower" style = "z-index:1;">
+        
+            <div id = "flower-top">
+        
+            </div>
+        
+            <div id = "stem">
+        
+            </div>
+            
+        </div>
+        
+        <div id = "cover" style = "z-index:2;">
+            
+            <div id = "textbox">
+                          Click the watering can to make the flower grow!
+            </div>    
+        
+        </div>
+        
+        <div id = "watering-can" style = "z-index:2;">
+        
+        </div>
+        
+        <div id = "water">
+        
+        </div>
+        
+        <div id = "water2">
+        
+        </div>
+        
+        <div id = "water3">
+        
+        </div>
+        
+        <div id = "water4">
+        
+        </div>
+        
+        <div id = "water5">
+        
+        </div>
+        
+        <div id = "can-cover">
+        
+        </div>
+        
+        
+    </div>
+    
+    <div id = "end">
+    
+        <div id = "sun">
+        
+        </div>
+        
+        <button id = "retry">
+        Retry?
+        </button>
+        
+        <div id = "win">
+        The Flower Has Grown
+            Congragulations!
+        </div>
+        
+        <div id = "leaf">
+             
+        </div>
+        
+        <div id = "leaf2">
+        
+        </div>
+        
+         <div id = "flowermiddle">
+                
+         </div>
+    </div>
+    
+    
+<script>
+
+    var myStart;
+    myStart = document.querySelector("#start");
+    
+    var myGame;
+    myGame = document.querySelector("#game");
+    
+    var myStartbutton;
+    myStartbutton = document.querySelector("#startbutton");
+    myStartbutton.innerHTML = "START";
+    myStartbutton.style.textAlign = "center";
+    myStartbutton.style.fontSize = "3em";
+    myStartbutton.addEventListener("click",hideStartShowGame, false);
+    
+    var myWateringCan;
+    myWateringCan = document.querySelector("#watering-can");
+    myWateringCan.addEventListener("click", growFlower, false);
+    myWateringCan.addEventListener("click", rotateCan, false);
+    
+    var myCanCover;
+    myCanCover = document.querySelector("#can-cover");
+    
+    var myFlower = document.querySelector("#flower");
+    
+    var positionY = 0;
+    
+    var clickcount = 0;
+    
+    var myStem = document.querySelector("#stem");
+    
+    var myWater1 = document.querySelector("#water");
+    
+    var myWater2 = document.querySelector("#water2");
+    
+    var myWater3 = document.querySelector("#water3");
+    
+    var myWater4 = document.querySelector("#water4");
+    
+    var myWater5 = document.querySelector("#water5");
+    
+    var myFlowerTop = document.querySelector("#flower-top");
+    
+    function growFlower() {
+        positionY -= 10;
+        clickcount += 1;
+        myFlower.style.transform = "translateY("+positionY+"%)"
+            
+        if (clickcount < 5) {
+            myCanCover.style.zIndex = 1;
+        }  if (clickcount == 1) {
+                myWater1.style.display = "block";
+            } else if (clickcount == 2) {
+                myWater2.style.display = "block";
+            } else if (clickcount == 3) {
+                myWater3.style.display = "block";
+            } else if (clickcount == 4) {
+                myWater4.style.display = "block";
+            }  
+        else {
+            myCanCover.style.zIndex = 3;
+            myWater5.style.display = "block";
+            myFlowerTop.style.backgroundColor = "deeppink";
+            endGame();
+        }
+        
+        }
+    
+    var myEnd = document.querySelector("#end");
+    
+    function endGame() {
+        myEnd.style.display = "block";
+    }
+    
+    function rotateCan() {
+        myWateringCan.style.transform = "rotate(45deg)"
+    }
+    
+    function hideStartShowGame() {
+        myStart.style.display= "none";
+        myGame.style.display = "block";
+    }
+    
+    var myRetryBTN;
+        myRetryBTN = document.querySelector("#retry")
+        myRetryBTN.addEventListener("click", myRestart, false);
+    
+    function myRestart() {
+        location.reload();
+    }
+
+
+
+</script>
+</body>
+</html>
