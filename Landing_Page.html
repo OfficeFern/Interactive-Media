@@ -1,19 +1,28 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<!-- saved from url=(0064)https://officefern.github.io/Interactive-Media/Landing_Page.html -->
+<html class="gr__officefern_github_io"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
     <style>
+        body {
+            margin: 0;
+        }
+        
+        div {
+            margin-bottom: 10px;
+        }
         
         img {
-            max-width: 100%;
-            max-height: 100%;
+            position: relative;
+            width: calc(100vw - 10px); 
         }
         
         .portrait {
-            height: 50vh;
-            width: 40vw;
+            position: static;
+            /* height: 50vh; */
+            width: 100%;
             z-index: 1;
         }
+      
 
         .landscape {
             height: 40vh;
@@ -43,26 +52,29 @@
             
         }
         
-        #body {
+        #bodyXX {
             position: relative;
             top: 0;
             left: 0;
-            width:100%;
-            height: 50%;
+            width: calc(100%);
             background-color: lightgray;
             z-index: 0;
+            padding: 10px;
             
         }
         
         #foot {
-            position: relative;
+            position: static;
             top: 0;
             left: 0;
             width:100%;
             height: 10%;
             background-color: darkgray;
             z-index: 1;
-            
+            text-align: center;
+            font-size: 0.8em;
+            font-family: sans-serif;
+            padding: 5px;
         }
         
         #form {
@@ -78,6 +90,7 @@
         h1{
             font-size: 60px;
             text-align: center;
+            color: lightgray;
         }
         
         #input {
@@ -116,17 +129,33 @@
             
         }
         
+        .rotate270{
+            height: calc(100vw - 20px);
+            padding: 5px;
+            background-size: contain;
+            transform: rotate(270deg);
+          
+        }
+        
+        .rotate90{
+            height: calc(100vw - 20px);
+            padding: 5px;
+            background-size: contain;
+            transform: rotate(90deg);
+          
+        }
+        
         
     </style>
     </head>
     
-    <body>
+    <body data-gr-c-s-loaded="true">
         <!-- MAke the CSS for this page make multiple large images that slide across the page-->
-        <div id = "head">
+        <div id="head">
         <h1>Pick'em Ups (Name Pending)</h1>
         </div>
         
-        <div id = "body">
+        <div id="bodyXX">
             
             <div id="introduction">
             <br>
@@ -137,51 +166,43 @@
             <!--maybe put these pictures in a jumbotron or another type of div so that the text can go along side it or aybe to make the page look better you can just have the text in a seperate divs-->
             <div>
             <h2>The Problem</h2>
-            <p>One of the issues teens face when they move away from their childhood homes is making new friends. It can be intimidating to try and figure out where to or how to meet new people without being uncomfortable. So I was looking for a way to make it easier for these teens to connect with others that have similar interests or that just want to meet new people.</p>    
+            <div>One of the issues teens face when they move away from their childhood homes is making new friends. It can be intimidating to try and figure out where to or how to meet new people without being uncomfortable. So I was looking for a way to make it easier for these teens to connect with others that have similar interests or that just want to meet new people.</div>    
             </div>
             
             <div>
             <h2>The Solution</h2>
-            <p>So my idea took form of the app concept, "Pick'em Ups". Pick'em Ups is a social app that, in short, allows its users to create or find local pick-up games with other users, but I'll go into more detail as we go on.</p>
+            <div>So my idea took form of the app concept, "Pick'em Ups". Pick'em Ups is a social app that, in short, allows its users to create or find local pick-up games with other users, but I'll go into more detail as we go on.</div>
             </div>
             
             
-            <p>To start off I wanted to create a easy to navigate home page so it wasn't confusing to younger users. The content of the tabs will change as more research is done.
-
+            <div>To start off I wanted to create a easy to navigate home page so it wasn't confusing to younger users. The content of the tabs will change as more research is done.
+<br><br>
                 In these sketches though I include how the map page may look and how a user would see the markers/game locations. 
-
+<br><br>
                 There is also and idea of how it'd look when you click on one of the game markers.
-
-                The friends tab is the first draft of how you'd see your friends organized and how a persons profile would look when you select their name. </p>
+<br><br>
+                The friends tab is the first draft of how you'd see your friends organized and how a persons profile would look when you select their name. 
+            </div>
+            
             <div class="portrait">
-                <img src="UI%20Sketches.jpg" style="float: left;">
+                <img src="./Landing_Page_TreyH_files/UI Sketches.jpg">
             </div>
-
-            <br>
-            <br>
-            <br>
+     
             
-            <div class="portrait" ALIGN="right">
-                <p>These are my sketches of the marker that would show when a user created a game. I wanted it to be simple, but informative. I also</p>
-                <img src="Marker%20Sketches.jpg">
+            
+            <div class="portrait" >
+                <div>These are my sketches of the marker that would show when a user created a game. I wanted it to be simple, but informative. I also</div>
+                <img src="./Landing_Page_TreyH_files/Marker Sketches.jpg">
             </div>
-            
-            <br>
-            <br>
-            <br>
                 
             <div class="portrait">
-                <p>My persona is a young teen who has a history of playing baseball, but has moved to a new state where he doesn't know anyone and wants to make friends.</p>
-                <img src="Persona.jpg" style = "transform: rotate(270deg);">
+                <div>My persona is a young teen who has a history of playing baseball, but has moved to a new state where he doesn't know anyone and wants to make friends.</div>
+                <img class="rotate270" src="./Landing_Page_TreyH_files/Persona.jpg">
             </div>
-            
-            <br>
-            <br>
-            <br>
-            
-            <div class="portrait" style = "width">
+
+            <div class="portrait">
                 <p>Very rough sketches I've done for the community tabs where people can create groups to help division of skill and strengthen the social aspect of the app.</p>
-                <img src="Group%20Sketches.jpg"  style = "transform: rotate(90deg);position:relative;left:60vw;">
+                <img class="rotate90" src="./Landing_Page_TreyH_files/Group Sketches.jpg">
             </div>
             
                <p>
@@ -190,59 +211,39 @@
             
             <div class="portrait">
                 
-                <img src="WF1.jpg" style="transform: rotate(90deg)">
-            </div>
+                <img class="rotate90"  src="./Landing_Page_TreyH_files/WF1.jpg">
             
-            <br>
-            <br>
-            
-            <div class="portrait"  style="transform: rotate(90deg)">
                 
-                <img src="WF2.jpg" >
-            </div>
+                <img class="rotate90"  src="./Landing_Page_TreyH_files/WF2.jpg">
             
-            <br>
-            <br>
             
-            <div class="portrait"  style="transform: rotate(90deg)">
-                
-                <img src="WF3.jpg">
-            </div>
+        
+                <img class="rotate90"  src="./Landing_Page_TreyH_files/WF3.jpg">
             
-            <br>
-            <br>
             
-            <div class="portrait"  style="transform: rotate(90deg)">
-                
-                <img src="WF4.jpg">
-            </div>
             
-            <br>
-            <br>
-            
-            <div class="portrait"  style="transform: rotate(90deg)">
-                
-                <img src="WF5.jpg">
-            </div>
-            
-            <br>
-            <br>
-            
-            <div class="portrait"  style="transform: rotate(90deg)">
-                
-                <img src="WF6.jpg">
+                <img class="rotate90"  src="./Landing_Page_TreyH_files/WF4.jpg">
+           
+  
+                <img class="rotate90"  src="./Landing_Page_TreyH_files/WF5.jpg">
+      
+   
+                <img class="rotate90"  src="./Landing_Page_TreyH_files/WF6.jpg">
             </div>
         </div>
             
         
-        <div id = "foot">
-        
+        <div id="foot">
+        Trey Heavner &copy;2019
         </div>
         <!--This one might be changed to be the form that has all the info that the customer would enter-->
         
         <!--This is where the form went before I got rid of it-->
+            
         
-        
-    </body>
     
+    
+
+</body>
+        
 </html>
