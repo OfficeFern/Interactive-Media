@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+  <head>
+      
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+      
+      <style>
+            
+          
+          default {
+              margin: 0;
+              padding: 0;
+              background-color: darkslategray;
+          }
+          
+          #greetingpage {
+              position: absolute;
+              background-color: darkslategray;
+              color: darkorange;
+              height: 100vh;
+              width: 100vw;
+              text-align: center;
+              display: block;
+          }
+          
+          
+          
+          #greetingmessage {
+              background-color: black;
+              height: 50%;
+              width: 90%;
+          }
+          
+          .logo {
+              margin-top: 20px;
+              display: inline-block;
+              width: 80%;
+              height: 15%;
+              background-color:black;
+              color: orange;
+              transform: skewX(-35deg);
+              padding: 25px;
+              font-size: 36px;
+          }
+          
+         
+          
+          #homepage{
+              position: absolute;
+              background-color: darkslategray;
+              color: darkgoldenrod;
+              height: 100%;
+              width: 100%;
+              text-align: center;
+              display: none;
+              margin: 0;
+              font-size: 20px;
+          }
+          
+          #friendspage{
+              position: absolute;
+              background-color: darkslategray;
+              color:darkorange;
+              height: 100vh;
+              width: 100vw;
+              text-align: center;
+              display: none;
+          }
+          
+          #communitiespage{
+              position: absolute;
+              background-color: darkslategray;
+              color: darkorange;
+              height: 100vh;
+              width: 100vw;
+              text-align: center;
+              display: none;
+          }
+          
+          #profilepage{
+              position: absolute;
+              background-color: darkslategray;
+              color: darkorange;
+              height: 100vh;
+              width: 100vw;
+              text-align: center;
+              display: none;
+          }
+          
+          #localpage {
+              position: absolute;
+              background-color: darkslategray;
+              color: darkorange;
+              height: 100vh;
+              width: 100vw;
+              text-align: center;
+              display: none;
+          }
+          
+          #tab1{
+              position: relative;
+              left: 0%;
+              top: 20%;
+              background-color: black;
+              height:5%;
+              width: 40%;
+              margin: 0;
+              cursor: pointer;
+              text-align: center;
+          }
+          
+          #tab2{
+              position: relative;
+              left: 0%;
+              top: 25%;
+              background-color: black;
+              height:5%;
+              width: 40%;
+              margin: 0;
+              cursor: pointer;
+              text-align: center;
+          }
+          
+          #tab3{
+              position: relative;
+              left: 0%;
+              top: 30%;
+              background-color: black;
+              height:5%;
+              width: 40%;
+              margin: 0;
+              cursor: pointer;
+              text-align: center;
+          }
+          
+          #tab4{
+              position: relative;
+              left: 0%;
+              top: 35%;
+              background-color: black;
+              height:5%;
+              width: 40%;
+              margin: 0;
+              cursor: pointer;
+              text-align: center;
+          }
+          
+          #news {
+              position: absolute;
+              left: 50%;
+              top: 30%;
+              height: 65%;
+              width: 40%;
+              background-color: black;
+              color: darkorange;
+              font-size: 18px;
+              
+          }
+          
+          .agame {
+              cursor: pointer;
+          }
+          
+          #backBTN {
+              position: absolute;
+              left: 0%;
+              top: 90%;
+              height: 4vh;
+              width: 8vw;
+              background-color: transparent;
+              border-radius: 50%;
+              cursor: pointer;
+              
+          }
+          
+          #backBTN2 {
+              position: absolute;
+              left: 0%;
+              top: 90%;
+              height: 4vh;
+              width: 8vw;
+              background-color: transparent;
+              border-radius: 50%;
+              cursor: pointer;
+              
+          }
+          
+          #backBTN3 {
+              position: absolute;
+              left: 0%;
+              top: 90%;
+              height: 4vh;
+              width: 8vw;
+              background-color: transparent;
+              border-radius: 50%;
+              cursor: pointer;
+              
+          }
+          
+          #testblock {
+              background-color: red;
+              height: 30%;
+              width: 30%;
+              display: block;
+          }
+          
+          #friendsbox {
+              position: absolute;
+              top: 25%;
+              left: 10%;
+              height: 70vh;
+              width: 70vw;
+              border-style: solid;
+              border-color: black;
+              background-color: black;
+              overflow: hidden;
+          }
+          
+          .friendbar {
+              height: 5vh;
+              width: 70vw;
+              background-color: darkslategray;
+              opacity: 50%;
+              text-align: left;
+              font-size: 20px;
+              color: coral;
+          }
+          
+          .titlebox {
+              height: 10vh;
+              width: 35vw;
+              border-style: solid;
+              background-color: lightgray;
+              border-color: darkgray;
+          }
+          
+          #map {
+              position: absolute;
+              top: 25%;
+              left: 15%;
+              width: 75vw;
+              height: 65vh;
+              color:azure;
+              background-color: forestgreen;
+              border-radius: 20%;
+              border-style: solid;
+              border-color: darkgreen;
+              border-width: 2px;
+              
+          }
+          
+          #localevents {
+              cursor: pointer;
+          }
+          
+          #marker{
+              cursor:pointer;
+          }
+          
+          #gameexample {
+              position:absolute;
+              top: 30%;
+              left: 45%;
+              height: 30%;
+              width: 50%;
+              border-radius: 10%;
+              background-color: orange;
+              display: block;
+          }
+          
+          #avatar {
+              position: absolute;
+              top: 5%;
+              left: 5%;
+              height: 35%;
+              width: 35%;
+              background-color: transparent;
+          }
+          
+          #extra {
+              position: absolute;
+              top: 55%;
+              left: 5%;
+              height: 35%;
+              width: 35%;
+              background-color: transparent;
+              border-color: black;
+          }
+          
+          #gamedetails {
+              position: absolute;
+              top: 5%;
+              left: 50%;
+              height: 85%;
+              width: 40%;
+              background-color: orangered;
+              opacity: 50%;
+              border-color: black;
+          }
+          
+          #userimage {
+              
+          }
+          
+          #profile {
+              position: absolute;
+              height: 65%;
+              width: 75%;
+              top: 20%;
+              left: 25%;
+              background-color: darkslategray;
+              color: darkorange;
+          }
+          
+          #activity {
+              
+          }
+          
+          #userinfo {
+              
+          }
+      </style>
+      
+  </head>
+  
+  <body>
+   
+  
+  <div id = "greetingpage" class="container-fluid" style="margin-top: 0;margin-left: 0; text-align: center;">
+      
+      <div class = "logo">
+      APP NAME
+      </div>
+      
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      <div class = "container">
+      <div id = "greetingmessage" class = "container" style = "padding: 5%;">
+      <h1>Welcome Friend!</h1>
+      <p style = "font-size:24px;padding:20px;">We've noticed you haven't made an account.
+          Would you like to make one?
+          </p> 
+    <p>(Click sign in to continue and click local games to check your area)
+          </p>
+      </div>
+      
+      <div>
+          <button class = "btn-warning">
+          Sign Up
+          </button>
+
+          <button class = "btn-warning" id = "guestbtn">
+          Sign In    
+          </button>
+      </div>
+      </div>
+      
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      <div class = "btn-lg btn-warning">
+      Continue as Guest
+      </div>
+      
+  </div>
+      
+   <div id = "homepage" class="container-fluid" style="margin-top: 0;margin-left: 0; text-align: center;">
+          
+          <div class = "logo">
+          APP NAME
+          </div>
+          
+          <div id = "tab1" class = "jumbotron">
+          Home
+          </div>
+          
+          <div id = "tab2" class = "jumbotron">
+          Friends
+          </div>
+          
+          <div id = "tab3" class = "jumbotron">
+          Communities
+          </div>
+          
+          <div id = "tab4" class = "jumbotron">
+          Profile
+          </div>
+          
+          
+          
+          <div class = "jumbotron" id = "news">
+            <h1 style = "color:orangered;" id = "localevents" style = "border-style: solid;border-color: orangered;">Local Events</h1>
+              
+              <br>
+              <br>
+              
+              <div class = "agame">
+              Ben Shapiro
+                  
+                  <i class = "fas fa-baseball-ball"></i>
+              </div>
+              
+              <br>
+              <br>
+              
+              <div class = "agame">
+              Michel Bisping
+                  <i class = "fas fa-football-ball"></i>
+              </div>
+              
+              <br>
+              <br>
+              
+              <div class = "agame">
+              Cody Garbret
+                  <i class = "fas fa-basketball-ball"></i>
+              </div>
+              
+              <br>
+              <br>
+              
+              <div class ="agame">
+              Anderson Silva
+                <i class = "fas fa-golf-ball"></i>
+              </div>
+              
+          </div>
+              
+    </div>
+      
+    <div id = "friendspage" class="container-fluid" style="margin-top: 0;margin-left: 0; text-align: center;">
+        <div class = "logo">
+          APP NAME
+          </div>
+        <br>
+        <br>
+            <div id = "friendsbox" class = "jumbotron" style = "padding: 0;margin: 0;">
+                
+                <h1 style = "color: orangered;">Friends List</h1>
+                <br>
+                <br>
+                <br>
+                <div class = "friendbar">
+                    <i class = "person"></i>
+                Henry Cehootoe
+                    <i class = "fas fa-star"></i>
+                    <i class = "fas fa-star"></i>
+                    <i class = "fas fa-star"></i>
+                    <i class = "fas fa-star"></i>
+                    <i class = "fas fa-star-half-alt"></i>
+                </div>
+                <br>
+                <div class = "friendbar">
+                    <i class = "person"></i>
+                Thomas Clearly
+                    <i class = "fas fa-star"></i>
+                    <i class = "fas fa-star"></i>
+                    <i class = "fas fa-star"></i>
+                    <i class = "fas fa-star"></i>
+                    <i class = "fas fa-star"></i>
+                </div>
+                <br>
+                <div class = "friendbar">
+                    <i class = "person"></i>
+                Joe Rogan
+                    <i class = "fas fa-star"></i>
+                    <i class = "fas fa-star"></i>
+                    <i class = "fas fa-star-half-alt"></i>
+                    <i class = "far fa-star"></i>
+                    <i class = "far fa-star"></i>
+                </div>
+                <br>
+                <div class = "friendbar">
+                    <i class = "person"></i>
+                Venny Cator
+                    <i class = "fas fa-star"></i>
+                    <i class = "fas fa-star"></i>
+                    <i class = "fas fa-star"></i>
+                    <i class = "fas fa-star"></i>
+                    <i class = "far fa-star"></i>
+                </div>
+                <br>
+                <div class = "friendbar">
+                    <i class = "person"></i>
+                Johnny Appleseed
+                    <i class = "fas fa-star"></i>
+                    <i class = "fas fa-star"></i>
+                    <i class = "fas fa-star"></i>
+                    <i class = "fas fa-star-half-alt"></i>
+                    <i class = "far fa-star"></i>
+                </div>
+                <br>
+                <div class = "friendbar">
+                    <i class = "person"></i>
+                Brandon Acherk
+                    <i class = "fas fa-star"></i>
+                    <i class = "fas fa-star"></i>
+                    <i class = "far fa-star"></i>
+                    <i class = "far fa-star"></i>
+                    <i class = "far fa-star"></i>
+                </div>
+                <br>
+            </div>
+        <div id = "backBTN">
+        <i class = "fas fa-backspace fa-2x" style = "color: black;"></i>
+        </div>
+      </div>
+      
+      <div id = "communitiespage">
+      
+          <div class = "logo">
+          APP NAME
+          </div>
+        <br>
+        <br>
+            <div id = "friendsbox" class = "jumbotron" style = "padding: 0;margin: 0;">
+                
+                <h1>Communities</h1>
+                <br>
+                <br>
+                <br>
+                
+                <div class = "friendbar">
+                    <i class = "fas fa-basketball-ball"></i>
+                The Smooth Ballers
+                    
+                </div>
+                <br>
+                <div class = "friendbar">
+                    <i class = "fas fa-baseball-ball"></i>
+                Hustons Harder Hitters
+                </div>
+                <br>
+                <div class = "friendbar">
+                    <i class = "fas fa-football-ball"></i>
+                Donald's Defensive Wall
+                    
+                </div>
+                <br>
+                <div class = "friendbar">
+                    <i class = "fas fa-volleyball-ball"></i>
+                Sally's Sweet Spikers
+                    
+                </div>
+                <br>
+                <div class = "friendbar">
+                    <i class = "fas fa-bowling-ball"></i>
+                Turkey Chasers
+                    
+                </div>
+                <br>
+            </div>
+        <div id = "backBTN2">
+        <i class = "fas fa-backspace fa-2x" style = "color: black;"></i>
+        </div>
+      </div>
+      
+      <div id = "profilepage">
+        <div class = "logo">
+          APP NAME
+        </div>
+          
+        <div id = "profile">
+          <div id = "userimage">
+            
+          </div>
+            
+          <div id = "activity">
+          
+          </div>
+            
+          <div id - "userinfo">
+            
+          </div>
+        </div>
+      </div>
+      
+      <div id = "localpage">
+          
+          <div class = "logo">
+            APP NAME
+          </div>
+          
+        <div id = "map" class = "jumbotron" style = "font-size: 12px;">
+          
+            <div>
+                <div>
+                    <i class = "far fa-hospital fa-5x" style = "position: absolute;top:5%;left:10%;"></i>
+                    
+                    <i class = "fas fa-school fa-5x" style = "position: absolute;top:5%;left:50%;"></i>
+                    
+                    <i class = "far fa-building fa-5x" style = "position: absolute;top:15%;left:80%;"></i>
+                    
+                    <i class = "fas fa-home fa-5x" style = "position: absolute;top:35%;left:30%;"></i>
+                    
+                    <div id = marker>
+                    <i class = "fas fa-fire fa-5x" style = "position: absolute;top:55%;left:60%;transform: rotate(180deg);color: orange;"></i>
+                    </div>
+                    
+                    <i class = "fas fa-gas-pump fa-5x" style = "position: absolute;top:75%;left:15%;"></i>
+                    
+                    <i class = "fas fa-place-of-worship fa-5x" style = "position: absolute;top:70%;left:40%;"></i>
+                    
+                    <div id = "gameexample" class = "jumbotron">
+                        
+                        <div id = "avatar">
+                            <i class = "fas fa-basketball-ball fa-5x"></i>
+                        </div>
+                        
+                        <div id = "gamedetails">
+                            <p style = "font-size:15px;">This game is strictly for those who want a challenge.</p>
+                        </div>
+                        
+                        <div id = "extra">
+                            <p style = "font-size: 15px;">User Name
+                                Rating<p>
+                            
+                            
+                        </div>
+                    
+                    </div>
+                    
+        
+                </div>
+                
+        </div>
+          
+      </div>
+  
+      
+    <script>
+      
+    var myGreetpage = document.querySelector("#greetingpage");
+        
+    var myHomepage = document.querySelector("#homepage");
+        
+    var myTestblock = document.querySelector("#testblock");
+        
+    var guestBTN = document.getElementById("guestbtn");
+        guestBTN.addEventListener("click", hideGreetpage, false);
+        
+    var myLogo = document.getElementsByClassName("logo");
+        
+    var myHomeBTN = document.querySelector("#tab1");
+        
+    var myFriendBTN = document.querySelector("#tab2");
+        myFriendBTN.addEventListener("click", loadFriendspage, false);
+        
+    var myCOMBTN = document.querySelector("#tab3");
+        myCOMBTN.addEventListener("click", loadCOMpage, false);
+        
+    var myProfileBTN = document.querySelector("#tab4");
+        myProfileBTN.addEventListener("click", loadProfilepage, false);
+        
+    var myFriendspage = document.querySelector("#friendspage");
+        
+    var myCommunitiespage = document.querySelector("#communitiespage");
+        
+    var myProfilepage = document.querySelector("#profilepage");
+        
+    var myLocalpage = document.querySelector("#localpage");
+        
+    var myBackBTN = document.querySelector("#backBTN");
+        myBackBTN.addEventListener("click", goBacktohome, false);
+        
+    var myBackBTN2 = document.querySelector("#backBTN2");
+        myBackBTN2.addEventListener("click", goBacktohome2, false);
+        
+    var myLocalBTN = document.querySelector("#localevents");
+        myLocalBTN.addEventListener("click", loadLocalpage, false);
+        
+    var myMarker = document.getElementById("marker");
+        myMarker.addEventListener("click", loadGameexample, false);
+        
+    var myGameexample = document.querySelector("gameexample");
+        
+    function hideGreetpage() {
+        
+        myGreetpage.style.display = "none";
+        myHomepage.style.display = "block";
+        
+    }
+    
+    function loadFriendspage() {
+        
+        myFriendspage.style.display = "block";
+    }
+        
+    function goBacktohome() {
+        myFriendspage.style.display = "none";
+        myHomepage.style.display = "block";
+    }
+        
+    function goBacktohome2() {
+        myCommunitiespage.style.display = "none";
+        myHomepage.style.display = "block";
+    }
+        
+    function loadCOMpage() {
+        myCommunitiespage.style.display = "block";
+        
+        
+    }
+        
+    function loadProfilepage() {
+        
+        myProfilepage.style.display = "block";
+    }
+        
+    function loadLocalpage() {
+        
+        myLocalpage.style.display = "block";
+    }
+    
+    function loadGameexample() {
+        myGameexample.style.display = "block";
+    }
+      
+    </script>
+      
+  </body>
+    
+</html>
